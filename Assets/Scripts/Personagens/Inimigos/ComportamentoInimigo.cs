@@ -2,33 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ComportamentoInimigo : MonoBehaviour
+public class ComportamentoInimigo : MonoBehaviour, IMatavel
 {
-
-    public float Forca;
-
-    public float ForcaExplosao;
-
     private float distanciaJogador;
-
     private float distanciaChao;
-
     private Vector3 direcao;
-
     private Rigidbody rb;
-
     private SphereCollider sphereCollider;
-
+    private StatusInimigo status;
     private GameObject jogador;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         sphereCollider = GetComponent<SphereCollider>();
-
-        jogador = GameObject.FindWithTag("Jogador");
+        status = GetComponent<StatusInimigo>();
 
         distanciaChao = sphereCollider.bounds.extents.y;
+
+        jogador = GameObject.FindWithTag("Jogador");
     }
 
     void FixedUpdate()
@@ -38,18 +30,25 @@ public class ComportamentoInimigo : MonoBehaviour
 
         if (NoChao())
         {
-            rb.AddForce(direcao.normalized * Forca);
+            rb.AddForce(direcao.normalized * status.Forca);
         }
 
         if (distanciaJogador > 20)
         {
-            GameObject.Destroy(gameObject);
+            Morrer();
         }
     }
 
-    public void Empurrar(Collider other)
+    public void Morrer()
     {
-        rb.AddExplosionForce(ForcaExplosao, other.transform.position, 5F);
+        GameObject.Destroy(gameObject);
+    }
+
+    public void Empurrar(GameObject other)
+    {
+        StatusBala statusBala = other.GetComponent<StatusBala>();
+
+        rb.AddExplosionForce(statusBala.ForcaExplosao, other.transform.position, 5F);
     }
 
     bool NoChao()

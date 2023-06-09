@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2581273522173383205}
   - component: {fileID: 2581273522173383204}
   - component: {fileID: 2581273522173383211}
+  - component: {fileID: 3814090133553103782}
   - component: {fileID: 1139026604}
   m_Layer: 0
   m_Name: InimigoBola
@@ -115,6 +116,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3814090133553103782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2581273522173383210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba37508c1551dd549b97afab5e6c9340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Forca: 35
 --- !u!114 &1139026604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,5 +141,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a127741f2fb17e44a9ab9670e8649fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Forca: 25
-  ForcaExplosao: 1500

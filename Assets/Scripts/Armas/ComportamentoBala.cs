@@ -4,29 +4,25 @@ using UnityEngine;
 
 public class ComportamentoBala : MonoBehaviour
 {
-
-    public float Velocidade;
-
     private Rigidbody rb;
-
-    private BoxCollider boxCollider;
+    private StatusBala status;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        boxCollider = GetComponent<BoxCollider>();
+        status = GetComponent<StatusBala>();
     }
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + (transform.forward * Velocidade) * Time.deltaTime);
+        rb.MovePosition(rb.position + (transform.forward * status.Velocidade) * Time.deltaTime);
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Inimigo")
         {
-            other.GetComponent<ComportamentoInimigo>().Empurrar(boxCollider);
+            other.GetComponent<ComportamentoInimigo>().Empurrar(gameObject);
         }
 
         GameObject.Destroy(gameObject);

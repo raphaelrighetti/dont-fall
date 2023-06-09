@@ -4,17 +4,11 @@ using UnityEngine;
 
 public class SpawnInimigos : MonoBehaviour
 {
-
     public float TempoSpawn;
-
     public float TempoTrocaDificuldade;
-
     public int ProbabilidadeSpawn;
-
     public GameObject InimigoBola;
-
     private float contadorSpawn;
-
     private float contadorDificuldade;
 
     void Update()

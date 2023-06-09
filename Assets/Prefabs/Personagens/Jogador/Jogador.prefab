@@ -44,10 +44,11 @@ GameObject:
   - component: {fileID: 2837290943149286036}
   - component: {fileID: 6458689421196165914}
   - component: {fileID: 4582410030918673600}
+  - component: {fileID: 5784384980049170588}
   - component: {fileID: 1221585740369066654}
   - component: {fileID: 4913777602277568069}
-  - component: {fileID: 1221585740369066661}
   - component: {fileID: 4529672989202965558}
+  - component: {fileID: 1221585740369066661}
   m_Layer: 0
   m_Name: Jogador
   m_TagString: Jogador
@@ -152,6 +153,20 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5784384980049170588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813391229105944995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce7effad1f086e4c9c74b16a7256da4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vivo: 1
+  Velocidade: 10
 --- !u!114 &1221585740369066654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,7 +179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a9a2024cfc7aa24f9dd3ac661a3d2eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Velocidade: 10
   EhParede:
     serializedVersion: 2
     m_Bits: 128
@@ -183,6 +197,20 @@ MonoBehaviour:
   EhChao:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &4529672989202965558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813391229105944995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 753556a6c521b78459776d48edff4a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DistanciaQuedaMax: 5
+  UI: {fileID: 0}
 --- !u!114 &1221585740369066661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,18 +225,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bala: {fileID: 1108685977448837799, guid: e3169b6c017513e4ab1859fa61510e27, type: 3}
   SpawnBala: {fileID: 1609703106}
---- !u!114 &4529672989202965558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 813391229105944995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 753556a6c521b78459776d48edff4a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &662372288470345580
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,23 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class MorteJogador : MonoBehaviour
+public class MorteJogador : MonoBehaviour, IMatavel
 {
+    public float DistanciaQuedaMax;
+    public Canvas UI;
+    private ComportamentoUI scriptComportamentoUI;
+    private StatusJogador statusJogador;
 
-    public GameObject Canvas;
-
-    void Update()
+    void Start()
     {
-        if (transform.position.y < -5)
-        {
-            Canvas.SetActive(true);
+        scriptComportamentoUI = UI.GetComponent<ComportamentoUI>();
+        statusJogador = GameObject.FindWithTag("Jogador").GetComponent<StatusJogador>();
+    }
 
-            if (Input.GetButtonDown("Fire1"))
-            {
-                SceneManager.LoadScene("Game");
-            }
+    void FixedUpdate()
+    {
+        if (transform.position.y <= -DistanciaQuedaMax && statusJogador.Vivo)
+        {
+            Morrer();
         }
+    }
+
+    public void Morrer()
+    {
+        statusJogador.Vivo = false;
+
+        scriptComportamentoUI.GameOver();
     }
 }

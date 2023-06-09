@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class RotacaoJogador : MonoBehaviour
 {
-
     public LayerMask EhChao;
-
     private Rigidbody rb;
 
     void Start()
@@ -16,8 +14,6 @@ public class RotacaoJogador : MonoBehaviour
 
     void FixedUpdate()
     {
-
-
         Ray raio = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit impacto;
 

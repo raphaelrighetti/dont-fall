@@ -4,12 +4,8 @@ using UnityEngine;
 
 public class Atirar : MonoBehaviour
 {
-
     public GameObject Bala;
-
     public GameObject SpawnBala;
-
-
 
     void Update()
     {
