@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using TMPro;
 
 public class ComportamentoUI : MonoBehaviour
@@ -9,6 +10,7 @@ public class ComportamentoUI : MonoBehaviour
     public GameObject PainelGameOver;
     public TMP_Text TextoTempoSobrevivencia;
     public TMP_Text TextoMelhorTempo;
+    public Slider TemporizadorDash;
     private float tempoSobrevivido;
     private float melhorTempo;
 
@@ -31,6 +33,23 @@ public class ComportamentoUI : MonoBehaviour
     public void Reiniciar()
     {
         SceneManager.LoadScene("Game");
+    }
+
+    public void AtualizaTemporizadorDash(float contador, float temporizadorMax)
+    {
+        if (TemporizadorDash.maxValue != temporizadorMax)
+        {
+            TemporizadorDash.maxValue = temporizadorMax;
+        }
+
+        if (contador >= temporizadorMax)
+        {
+            TemporizadorDash.value = temporizadorMax;
+        }
+        else
+        {
+            TemporizadorDash.value = contador;
+        }
     }
 
     private void AjustaMelhorTempo(float tempo)
