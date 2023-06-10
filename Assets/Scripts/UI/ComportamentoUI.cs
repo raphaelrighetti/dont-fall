@@ -10,7 +10,9 @@ public class ComportamentoUI : MonoBehaviour
     public GameObject PainelGameOver;
     public TMP_Text TextoTempoSobrevivencia;
     public TMP_Text TextoMelhorTempo;
+    public TMP_Text NumeroInimigosMortos;
     public Slider TemporizadorDash;
+    private int inimigosMortos;
     private float tempoSobrevivido;
     private float melhorTempo;
 
@@ -50,6 +52,13 @@ public class ComportamentoUI : MonoBehaviour
         {
             TemporizadorDash.value = contador;
         }
+    }
+
+    public void AtualizarInimigosMortos()
+    {
+        inimigosMortos++;
+
+        NumeroInimigosMortos.text = inimigosMortos.ToString();
     }
 
     private void AjustaMelhorTempo(float tempo)

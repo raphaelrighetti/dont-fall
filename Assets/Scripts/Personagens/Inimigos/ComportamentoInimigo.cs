@@ -10,13 +10,18 @@ public class ComportamentoInimigo : MonoBehaviour, IMatavel
     private Rigidbody rb;
     private SphereCollider sphereCollider;
     private StatusInimigo status;
+    private Canvas ui;
+    private ComportamentoUI scriptComportamentoUI;
     private GameObject jogador;
 
     void Start()
     {
+        ui = GameObject.FindObjectOfType<Canvas>();
+
         rb = GetComponent<Rigidbody>();
         sphereCollider = GetComponent<SphereCollider>();
         status = GetComponent<StatusInimigo>();
+        scriptComportamentoUI = ui.GetComponent<ComportamentoUI>();
 
         distanciaChao = sphereCollider.bounds.extents.y;
 
@@ -42,6 +47,8 @@ public class ComportamentoInimigo : MonoBehaviour, IMatavel
     public void Morrer()
     {
         GameObject.Destroy(gameObject);
+
+        scriptComportamentoUI.AtualizarInimigosMortos();
     }
 
     public void Empurrar(GameObject other)
