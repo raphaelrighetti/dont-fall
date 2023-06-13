@@ -4,36 +4,31 @@ using UnityEngine;
 
 public class SpawnInimigos : MonoBehaviour
 {
-    public float TempoSpawn;
-    public float TempoTrocaDificuldade;
-    public int ProbabilidadeSpawn;
     public GameObject InimigoBola;
     private float contadorSpawn;
-    private float contadorDificuldade;
+    private SpawnerConfig spawnerConfig;
+
+    void Start()
+    {
+        contadorSpawn = 0;
+
+        spawnerConfig = GameObject.FindWithTag("Spawner Config").GetComponent<SpawnerConfig>();
+    }
 
     void Update()
     {
         contadorSpawn += Time.deltaTime;
-        contadorDificuldade += Time.deltaTime;
 
-        if (contadorSpawn >= TempoSpawn)
+        if (contadorSpawn >= spawnerConfig.TempoSpawn)
         {
             int numeroGerado = Random.Range(1, 101);
 
-            if (numeroGerado <= ProbabilidadeSpawn)
+            if (numeroGerado <= spawnerConfig.ProbabilidadeSpawn)
             {
                 Instantiate(InimigoBola, transform.position, transform.rotation);
             }
 
             contadorSpawn = 0;
-        }
-
-        if (contadorDificuldade >= TempoTrocaDificuldade && TempoSpawn >= 0.10F)
-        {
-            TempoSpawn -= 0.05F;
-            ProbabilidadeSpawn += 3;
-
-            contadorDificuldade = 0;
         }
     }
 }

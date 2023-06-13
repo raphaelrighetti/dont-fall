@@ -10,18 +10,27 @@ public class ComportamentoInimigo : MonoBehaviour, IMatavel
     private Rigidbody rb;
     private SphereCollider sphereCollider;
     private StatusInimigo status;
-    private Canvas ui;
     private ComportamentoUI scriptComportamentoUI;
     private GameObject jogador;
 
     void Start()
     {
-        ui = GameObject.FindObjectOfType<Canvas>();
+        Canvas[] canvasList = GameObject.FindObjectsOfType<Canvas>();
 
         rb = GetComponent<Rigidbody>();
         sphereCollider = GetComponent<SphereCollider>();
         status = GetComponent<StatusInimigo>();
-        scriptComportamentoUI = ui.GetComponent<ComportamentoUI>();
+
+        foreach (Canvas item in canvasList)
+        {
+            ComportamentoUI script = item.GetComponent<ComportamentoUI>();
+
+            if (script != null)
+            {
+                scriptComportamentoUI = script;
+                break;
+            }
+        }
 
         distanciaChao = sphereCollider.bounds.extents.y;
 
