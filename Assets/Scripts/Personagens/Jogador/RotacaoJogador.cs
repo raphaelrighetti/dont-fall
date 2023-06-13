@@ -6,24 +6,19 @@ public class RotacaoJogador : MonoBehaviour
 {
     public LayerMask EhChao;
     private Rigidbody rb;
+    private InputMethod inputMethod;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        inputMethod = GetComponent<InputMethod>();
     }
 
     void FixedUpdate()
     {
-        Ray raio = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit impacto;
+        Quaternion novaRotacao = Quaternion.LookRotation(inputMethod.PosicaoMira);
+        novaRotacao.y = 0;
 
-        if (Physics.Raycast(raio, out impacto, 100, EhChao))
-        {
-            Vector3 posicaoMira = impacto.point - transform.position;
-            posicaoMira.y = 0;
-            Quaternion rotacao = Quaternion.LookRotation(posicaoMira);
-
-            rb.MoveRotation(rotacao);
-        }
+        rb.MoveRotation(novaRotacao);
     }
 }

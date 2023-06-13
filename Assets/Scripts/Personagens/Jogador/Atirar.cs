@@ -4,21 +4,42 @@ using UnityEngine;
 
 public class Atirar : MonoBehaviour
 {
+    public float CadenciaTiro;
     public GameObject Bala;
     public GameObject SpawnBala;
+    private bool atirando = false;
+    private float contadorTiro = 0;
+    private InputMethod inputMethod;
+
+    void Start()
+    {
+        inputMethod = GetComponent<InputMethod>();
+    }
 
     void Update()
     {
-        GameObject balaRef = null;
-
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetAxis(inputMethod.Atirar) > 0)
         {
-            balaRef = Instantiate(Bala, SpawnBala.transform.position, SpawnBala.transform.rotation);
+            if (!atirando)
+            {
+                contadorTiro = CadenciaTiro;
+                atirando = true;
+            }
+
+            if (contadorTiro >= CadenciaTiro)
+            {
+                GameObject balaRef = Instantiate(Bala, SpawnBala.transform.position, SpawnBala.transform.rotation);
+                GameObject.Destroy(balaRef, 3F);
+
+                contadorTiro = 0;
+            }
+
+            contadorTiro += Time.deltaTime;
         }
 
-        if (balaRef != null)
+        if (Input.GetAxis(inputMethod.Atirar) == 0)
         {
-            GameObject.Destroy(balaRef, 3F);
+            atirando = false;
         }
     }
 }

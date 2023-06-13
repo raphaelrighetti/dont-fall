@@ -7,13 +7,11 @@ public class SpawnerConfig : MonoBehaviour
     public float TempoSpawn;
     public float TempoTrocaDificuldade;
     public int ProbabilidadeSpawn;
-    private float contadorDificuldade;
+    private float contadorDificuldade = 0;
     private StatusJogador statusJogador;
 
     void Start()
     {
-        contadorDificuldade = 0;
-
         statusJogador = GameObject.FindWithTag("Jogador").GetComponent<StatusJogador>();
     }
 

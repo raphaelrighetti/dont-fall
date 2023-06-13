@@ -501,18 +501,14 @@ PrefabInstance:
       propertyPath: UI
       value: 
       objectReference: {fileID: 1020347054}
-    - target: {fileID: 1221585740369066654, guid: 19214c0185e7eec4b8076f7b430b1f7d, type: 3}
-      propertyPath: DashCooldown
-      value: 4
+    - target: {fileID: 1221585740369066661, guid: 19214c0185e7eec4b8076f7b430b1f7d, type: 3}
+      propertyPath: CadenciaTiro
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 4529672989202965558, guid: 19214c0185e7eec4b8076f7b430b1f7d, type: 3}
       propertyPath: UI
       value: 
       objectReference: {fileID: 1020347054}
-    - target: {fileID: 5784384980049170588, guid: 19214c0185e7eec4b8076f7b430b1f7d, type: 3}
-      propertyPath: ForcaDash
-      value: 750
-      objectReference: {fileID: 0}
     - target: {fileID: 7990570786967226966, guid: 19214c0185e7eec4b8076f7b430b1f7d, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -557,7 +553,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3810749096368157277, guid: 19214c0185e7eec4b8076f7b430b1f7d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 19214c0185e7eec4b8076f7b430b1f7d, type: 3}
 --- !u!1 &1221585740369066653 stripped
 GameObject:

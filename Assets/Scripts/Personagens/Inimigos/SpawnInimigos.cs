@@ -5,13 +5,11 @@ using UnityEngine;
 public class SpawnInimigos : MonoBehaviour
 {
     public GameObject InimigoBola;
-    private float contadorSpawn;
+    private float contadorSpawn = 0;
     private SpawnerConfig spawnerConfig;
 
     void Start()
     {
-        contadorSpawn = 0;
-
         spawnerConfig = GameObject.FindWithTag("Spawner Config").GetComponent<SpawnerConfig>();
     }
 

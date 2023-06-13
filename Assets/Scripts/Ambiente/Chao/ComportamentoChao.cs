@@ -77,10 +77,10 @@ public class ComportamentoChao : MonoBehaviour
                 posicaoNovaPlataforma.x += boxCollider.bounds.size.x;
                 break;
             case "Atrás":
-                posicaoNovaPlataforma.z -= -boxCollider.bounds.size.z;
+                posicaoNovaPlataforma.z -= boxCollider.bounds.size.z;
                 break;
             case "Esquerda":
-                posicaoNovaPlataforma.z -= -boxCollider.bounds.size.x;
+                posicaoNovaPlataforma.z -= boxCollider.bounds.size.x;
                 break;
         }
 

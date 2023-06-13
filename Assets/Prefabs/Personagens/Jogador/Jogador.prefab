@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 6458689421196165914}
   - component: {fileID: 4582410030918673600}
   - component: {fileID: 5784384980049170588}
+  - component: {fileID: 2711054487155922050}
   - component: {fileID: 1221585740369066654}
   - component: {fileID: 4913777602277568069}
   - component: {fileID: 4529672989202965558}
@@ -167,6 +168,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Vivo: 1
   Velocidade: 10
+  ForcaDash: 750
+--- !u!114 &2711054487155922050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813391229105944995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376831bfade99d74e9b78e3256eb7029, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1221585740369066654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,9 +193,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a9a2024cfc7aa24f9dd3ac661a3d2eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DashCooldown: 4
   EhParede:
     serializedVersion: 2
     m_Bits: 128
+  UI: {fileID: 0}
 --- !u!114 &4913777602277568069
 MonoBehaviour:
   m_ObjectHideFlags: 0

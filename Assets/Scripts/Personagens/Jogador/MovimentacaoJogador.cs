@@ -11,12 +11,14 @@ public class MovimentacaoJogador : MonoBehaviour
     private Vector3 direcao;
     private Rigidbody rb;
     private StatusJogador status;
+    private InputMethod inputMethod;
     private ComportamentoUI scriptComportamentoUI;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         status = GetComponent<StatusJogador>();
+        inputMethod = GetComponent<InputMethod>();
         scriptComportamentoUI = UI.GetComponent<ComportamentoUI>();
 
         contadorDash = DashCooldown;
@@ -26,8 +28,8 @@ public class MovimentacaoJogador : MonoBehaviour
     {
         contadorDash += Time.deltaTime;
 
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        float x = Input.GetAxis(inputMethod.HorizontalMovement);
+        float z = Input.GetAxis(inputMethod.VerticalMovement);
 
         scriptComportamentoUI.AtualizaTemporizadorDash(contadorDash, DashCooldown);
 
