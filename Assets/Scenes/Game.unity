@@ -509,6 +509,10 @@ PrefabInstance:
       propertyPath: UI
       value: 
       objectReference: {fileID: 1020347054}
+    - target: {fileID: 6458689421196165914, guid: 19214c0185e7eec4b8076f7b430b1f7d, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     - target: {fileID: 7990570786967226966, guid: 19214c0185e7eec4b8076f7b430b1f7d, type: 3}
       propertyPath: m_RootOrder
       value: 3

@@ -31,14 +31,14 @@ public class MovimentacaoJogador : MonoBehaviour
         float x = Input.GetAxis(inputMethod.HorizontalMovement);
         float z = Input.GetAxis(inputMethod.VerticalMovement);
 
+        direcao = new Vector3(x, 0, z);
+
         scriptComportamentoUI.AtualizaTemporizadorDash(contadorDash, DashCooldown);
 
         if (Input.GetButtonDown("Fire3") && contadorDash >= DashCooldown)
         {
             Dash();
         }
-
-        direcao = new Vector3(x, 0, z);
     }
 
     void FixedUpdate()
