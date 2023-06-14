@@ -11,8 +11,7 @@ public class InputMethod : MonoBehaviour
     [HideInInspector]
     public string Atirar = "Fire1";
     [HideInInspector]
-    public Vector3 PosicaoMira;
-    private float posicaoMiraRadius = 2;
+    public string TipoRotacao;
 
     void Update()
     {
@@ -27,7 +26,7 @@ public class InputMethod : MonoBehaviour
             HorizontalMovement = "Horizontal";
             VerticalMovement = "Vertical";
             Atirar = "Fire1";
-            PosicaoMira = (Input.mousePosition - transform.position).normalized;
+            TipoRotacao = "Mouse";
         }
 
         // Controle
@@ -41,11 +40,7 @@ public class InputMethod : MonoBehaviour
             HorizontalMovement = "Left Stick H";
             VerticalMovement = "Left Stick V";
             Atirar = "Atirar Joystick";
-
-            float x = Input.GetAxis("Right Stick H") * posicaoMiraRadius;
-            float z = Input.GetAxis("Right Stick V") * posicaoMiraRadius;
-
-            PosicaoMira = (transform.position + new Vector3(x, 0, z)).normalized;
+            TipoRotacao = "Joystick";
         }
     }
 }

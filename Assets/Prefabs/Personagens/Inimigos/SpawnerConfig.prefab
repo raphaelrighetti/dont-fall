@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1596cea365b9dc54ab720ef80e0ab298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TempoSpawn: 1
+  TempoSpawn: 5
   TempoTrocaDificuldade: 10
-  ProbabilidadeSpawn: 25
+  ProbabilidadeSpawn: 50

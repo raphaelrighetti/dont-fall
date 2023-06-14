@@ -503,7 +503,7 @@ PrefabInstance:
       objectReference: {fileID: 1020347054}
     - target: {fileID: 1221585740369066661, guid: 19214c0185e7eec4b8076f7b430b1f7d, type: 3}
       propertyPath: CadenciaTiro
-      value: 0.25
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4529672989202965558, guid: 19214c0185e7eec4b8076f7b430b1f7d, type: 3}
       propertyPath: UI
@@ -690,10 +690,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4735965997726374136, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 4735965997726374137, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
