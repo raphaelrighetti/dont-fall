@@ -8,6 +8,7 @@ using TMPro;
 public class ComportamentoUI : MonoBehaviour
 {
     public GameObject PainelGameOver;
+    public GameObject PainelMenuPause;
     public TMP_Text TextoTempoSobrevivencia;
     public TMP_Text TextoMelhorTempo;
     public TMP_Text NumeroInimigosMortos;
@@ -15,6 +16,7 @@ public class ComportamentoUI : MonoBehaviour
     private int inimigosMortos;
     private float tempoSobrevivido;
     private float melhorTempo;
+    private bool pausado = false;
 
     void Start()
     {
@@ -32,9 +34,28 @@ public class ComportamentoUI : MonoBehaviour
         PainelGameOver.SetActive(true);
     }
 
+    public void AlternarPause()
+    {
+        if (!pausado)
+        {
+            Pausar();
+        }
+        else
+        {
+            Despausar();
+        }
+
+        pausado = !pausado;
+    }
+
     public void Reiniciar()
     {
         SceneManager.LoadScene("Game");
+    }
+
+    public void TelaInicial()
+    {
+        SceneManager.LoadScene("TelaInicial");
     }
 
     public void AtualizaTemporizadorDash(float contador, float temporizadorMax)
@@ -59,6 +80,20 @@ public class ComportamentoUI : MonoBehaviour
         inimigosMortos++;
 
         NumeroInimigosMortos.text = inimigosMortos.ToString();
+    }
+
+    private void Pausar()
+    {
+        Time.timeScale = 0;
+
+        PainelMenuPause.SetActive(true);
+    }
+
+    private void Despausar()
+    {
+        Time.timeScale = 1;
+
+        PainelMenuPause.SetActive(false);
     }
 
     private void AjustaMelhorTempo(float tempo)

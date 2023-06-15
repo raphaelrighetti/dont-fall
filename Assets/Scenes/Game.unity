@@ -294,14 +294,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 20, z: 0}
+  m_LocalRotation: {x: 0.5033116, y: -0, z: -0, w: 0.86410505}
+  m_LocalPosition: {x: 0, y: 17.83, z: -11.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 60.439, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -572,9 +572,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2086202098}
     m_Modifications:
-    - target: {fileID: 1915288440, guid: b18399abd668e54498ad802ad2626c92, type: 3}
-      propertyPath: ChanceCriacaoPlataforma
-      value: 25
+    - target: {fileID: 1482247399, guid: b18399abd668e54498ad802ad2626c92, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 7539067221608075635, guid: b18399abd668e54498ad802ad2626c92, type: 3}
       propertyPath: m_Name
