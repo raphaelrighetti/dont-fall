@@ -4,5 +4,23 @@ using UnityEngine;
 
 public class PlataformasDisponiveis : MonoBehaviour
 {
-    public GameObject[] Plataformas;
+    public int QuantidadePlataformasMax;
+    public GameObject[] Disponiveis;
+    [HideInInspector]
+    public GameObject[] NaCena;
+
+    void Start()
+    {
+        StartCoroutine(PreencheNaCena());
+    }
+
+    private IEnumerator PreencheNaCena()
+    {
+        while (true)
+        {
+            NaCena = GameObject.FindGameObjectsWithTag("Plataforma");
+
+            yield return new WaitForSeconds(1);
+        }
+    }
 }

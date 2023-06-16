@@ -47,3 +47,5 @@ MonoBehaviour:
   TempoSpawn: 5
   TempoTrocaDificuldade: 10
   ProbabilidadeSpawn: 50
+  QuantidadeInimigosMax: 100
+  InimigosNaCena: []

@@ -9,6 +9,7 @@ TagManager:
   - Inimigo
   - Spawner Config
   - Plataformas Disponiveis
+  - Plataforma
   layers:
   - Default
   - TransparentFX

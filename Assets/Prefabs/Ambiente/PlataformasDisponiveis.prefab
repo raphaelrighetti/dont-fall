@@ -44,5 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baddf23637448034aa14a6765415aedd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Plataformas:
+  QuantidadePlataformasMax: 5
+  Disponiveis:
   - {fileID: 7539067221608075635, guid: b18399abd668e54498ad802ad2626c92, type: 3}
+  NaCena: []

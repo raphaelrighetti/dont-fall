@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ComportamentoCirculoExplosao : MonoBehaviour
 {
+    public float ForcaEmpurro;
     public Vector3 ValorCrescimento;
     public Vector3 ValorLimite;
 
@@ -14,6 +15,16 @@ public class ComportamentoCirculoExplosao : MonoBehaviour
         if (PassouDoLimite())
         {
             Destroy(gameObject);
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Jogador")
+        {
+            Vector3 direcaoEmpurro = (other.transform.position - transform.position).normalized;
+
+            other.GetComponent<MovimentacaoJogador>().Empurrar(direcaoEmpurro, ForcaEmpurro);
         }
     }
 

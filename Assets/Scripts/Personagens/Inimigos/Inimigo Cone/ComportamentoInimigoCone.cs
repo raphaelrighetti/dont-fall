@@ -10,7 +10,10 @@ public class ComportamentoInimigoCone : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Chao"))
         {
-            Instantiate(CirculoExplosao);
+            Vector3 posicaoSpawn = transform.position;
+            posicaoSpawn.y = 0.25F;
+
+            Instantiate(CirculoExplosao, posicaoSpawn, transform.rotation);
             Destroy(gameObject);
         }
     }

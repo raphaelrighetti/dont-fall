@@ -7,6 +7,7 @@ public class MovimentacaoJogador : MonoBehaviour
     public float DashCooldown;
     public LayerMask EhParede;
     public Canvas UI;
+    private bool empurravel = true;
     private float distanciaChao;
     private float contadorDash;
     private Vector3 direcao;
@@ -56,6 +57,31 @@ public class MovimentacaoJogador : MonoBehaviour
         {
             rb.MovePosition(rb.position + (direcao * status.Velocidade) * Time.deltaTime);
         }
+    }
+
+    public void Empurrar(Vector3 direcaoEmpurro, float forcaEmpurro)
+    {
+        if (empurravel)
+        {
+            empurravel = false;
+
+            direcaoEmpurro.y = transform.position.y;
+            rb.AddForce(direcaoEmpurro * forcaEmpurro);
+
+            StartCoroutine(PosEmpurro());
+        }
+    }
+
+    private IEnumerator PosEmpurro()
+    {
+        yield return new WaitForSeconds(0.5F);
+
+        while (!NoChao())
+        {
+            yield return null;
+        }
+
+        empurravel = true;
     }
 
     private void Pular()

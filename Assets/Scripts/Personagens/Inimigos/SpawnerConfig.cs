@@ -7,6 +7,8 @@ public class SpawnerConfig : MonoBehaviour
     public float TempoSpawn;
     public float TempoTrocaDificuldade;
     public int ProbabilidadeSpawn;
+    public int QuantidadeInimigosMax;
+    public GameObject[] InimigosNaCena;
     private float contadorDificuldade = 0;
     private StatusJogador statusJogador;
 
@@ -30,5 +32,7 @@ public class SpawnerConfig : MonoBehaviour
 
             contadorDificuldade = 0;
         }
+
+        InimigosNaCena = GameObject.FindGameObjectsWithTag("Inimigo");
     }
 }

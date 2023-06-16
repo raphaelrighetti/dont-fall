@@ -320,17 +320,6 @@ Canvas:
   m_CorrespondingSourceObject: {fileID: 4735965997726374136, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
   m_PrefabInstance: {fileID: 4735965998184553046}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1020347056 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4735965997726374118, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
-  m_PrefabInstance: {fileID: 4735965998184553046}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5281a6817effdb4e809e72e2dd8c700, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1408956204 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7574133069508443687, guid: b18399abd668e54498ad802ad2626c92, type: 3}
@@ -447,10 +436,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlataformasDisponiveis
       objectReference: {fileID: 0}
-    - target: {fileID: 430108345278799574, guid: 0dd2301126546d4459be21f91fa73f76, type: 3}
-      propertyPath: m_TagString
-      value: Plataformas Disponiveis
-      objectReference: {fileID: 0}
     - target: {fileID: 430108345278799576, guid: 0dd2301126546d4459be21f91fa73f76, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -516,10 +501,6 @@ PrefabInstance:
       propertyPath: UI
       value: 
       objectReference: {fileID: 1020347054}
-    - target: {fileID: 5784384980049170588, guid: 19214c0185e7eec4b8076f7b430b1f7d, type: 3}
-      propertyPath: ForcaPulo
-      value: 350
-      objectReference: {fileID: 0}
     - target: {fileID: 7990570786967226966, guid: 19214c0185e7eec4b8076f7b430b1f7d, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -578,10 +559,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2086202098}
     m_Modifications:
-    - target: {fileID: 1482247399, guid: b18399abd668e54498ad802ad2626c92, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -5
-      objectReference: {fileID: 0}
     - target: {fileID: 7539067221608075635, guid: b18399abd668e54498ad802ad2626c92, type: 3}
       propertyPath: m_Name
       value: Chao
@@ -696,38 +673,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 909959125131269463, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 909959125131269463, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 909959125131269463, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1020347056}
-    - target: {fileID: 909959125131269463, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 909959125131269463, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TelaInicial
-      objectReference: {fileID: 0}
-    - target: {fileID: 909959125131269463, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ComportamentoGameUI, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 909959125131269463, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2041090279643200085, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4735965997726374137, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -815,14 +760,6 @@ PrefabInstance:
     - target: {fileID: 4735965997726374141, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
       propertyPath: m_Name
       value: MainCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 4735965998716631992, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4735965998716631992, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}

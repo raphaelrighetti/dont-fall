@@ -5,21 +5,25 @@ using TMPro;
 
 public class ComportamentoChao : MonoBehaviour
 {
+    public float DistanciaJogadorMax;
     public float ChanceCriacaoPlataforma;
     public LayerMask EhChao;
+    private float distanciaJogador;
     private float contadorCriacaoPlataforma;
     private float contadorCriacaoPlataformaMax;
     private float tempoAtivo;
     private float[] possiveisTempos = { 5, 10, 15 };
+    private GameObject jogador;
     private BoxCollider boxCollider;
     private TMP_Text textoTempoAtivo;
-    private PlataformasDisponiveis plataformasDisponiveis;
+    private PlataformasDisponiveis plataformas;
 
     void Start()
     {
+        jogador = GameObject.FindWithTag("Jogador");
         boxCollider = GetComponent<BoxCollider>();
         textoTempoAtivo = transform.GetChild(0).GetChild(0).gameObject.GetComponent<TMP_Text>();
-        plataformasDisponiveis = GameObject.FindWithTag("Plataformas Disponiveis").GetComponent<PlataformasDisponiveis>();
+        plataformas = GameObject.FindWithTag("Plataformas Disponiveis").GetComponent<PlataformasDisponiveis>();
 
         tempoAtivo = possiveisTempos[Random.Range(0, possiveisTempos.Length)] + 1;
 
@@ -30,7 +34,27 @@ public class ComportamentoChao : MonoBehaviour
 
     void Update()
     {
+        distanciaJogador = Vector3.Distance(transform.position, jogador.transform.position);
+
+        if (distanciaJogador >= DistanciaJogadorMax)
+        {
+            Destroy(gameObject);
+        }
+
         contadorCriacaoPlataforma += Time.deltaTime;
+        tempoAtivo -= Time.deltaTime;
+
+        AtualizaTextoTempoAtivo();
+
+        if (tempoAtivo <= 0)
+        {
+            Destroy(gameObject);
+        }
+
+        if (plataformas.NaCena.Length >= plataformas.QuantidadePlataformasMax)
+        {
+            return;
+        }
 
         if (contadorCriacaoPlataforma >= contadorCriacaoPlataformaMax)
         {
@@ -44,18 +68,9 @@ public class ComportamentoChao : MonoBehaviour
             contadorCriacaoPlataforma = 0;
         }
 
-        tempoAtivo -= Time.deltaTime;
-
-        AtualizaTextoTempoAtivo();
-
         if (tempoAtivo >= 0.5 && tempoAtivo <= 1)
         {
             CriarPlataforma();
-        }
-
-        if (tempoAtivo <= 0)
-        {
-            Destroy(gameObject);
         }
     }
 
@@ -91,7 +106,7 @@ public class ComportamentoChao : MonoBehaviour
         }
 
         GameObject plataformaEscolhida =
-            plataformasDisponiveis.Plataformas[Random.Range(0, plataformasDisponiveis.Plataformas.Length)];
+            plataformas.Disponiveis[Random.Range(0, plataformas.Disponiveis.Length)];
 
         Instantiate(plataformaEscolhida, posicaoNovaPlataforma, transform.rotation);
     }
