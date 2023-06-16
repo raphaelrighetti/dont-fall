@@ -9,7 +9,7 @@ public class ComportamentoChao : MonoBehaviour
     private float contadorCriacaoPlataforma;
     private float contadorCriacaoPlataformaMax;
     private float tempoAtivo;
-    private float[] possiveisTempos = { 10, 15, 20, 25, 30 };
+    private float[] possiveisTempos = { 5, 10, 15 };
     private BoxCollider boxCollider;
     private TMP_Text textoTempoAtivo;
     private PlataformasDisponiveis plataformasDisponiveis;
