@@ -6,12 +6,12 @@ public class MorteJogador : MonoBehaviour, IMatavel
 {
     public float DistanciaQuedaMax;
     public Canvas UI;
-    private ComportamentoUI scriptComportamentoUI;
+    private ComportamentoGameUI scriptComportamentoUI;
     private StatusJogador statusJogador;
 
     void Start()
     {
-        scriptComportamentoUI = UI.GetComponent<ComportamentoUI>();
+        scriptComportamentoUI = UI.GetComponent<ComportamentoGameUI>();
         statusJogador = GameObject.FindWithTag("Jogador").GetComponent<StatusJogador>();
     }
 

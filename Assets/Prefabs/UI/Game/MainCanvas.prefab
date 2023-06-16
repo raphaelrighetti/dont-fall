@@ -879,9 +879,9 @@ GameObject:
   - component: {fileID: 4735965997726374139}
   - component: {fileID: 4735965997726374138}
   - component: {fileID: 4735965997726374118}
-  - component: {fileID: 1081666657}
+  - component: {fileID: 5137053872980433257}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: MainCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -990,7 +990,7 @@ MonoBehaviour:
   TextoMelhorTempo: {fileID: 4735965998882178303}
   NumeroInimigosMortos: {fileID: 4735965998884187136}
   TemporizadorDash: {fileID: 4735965999032719201}
---- !u!114 &1081666657
+--- !u!114 &5137053872980433257
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

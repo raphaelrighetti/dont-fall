@@ -320,6 +320,17 @@ Canvas:
   m_CorrespondingSourceObject: {fileID: 4735965997726374136, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
   m_PrefabInstance: {fileID: 4735965998184553046}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1020347056 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4735965997726374118, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
+  m_PrefabInstance: {fileID: 4735965998184553046}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5281a6817effdb4e809e72e2dd8c700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1408956204 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7574133069508443687, guid: b18399abd668e54498ad802ad2626c92, type: 3}
@@ -690,6 +701,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 909959125131269463, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 909959125131269463, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 909959125131269463, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1020347056}
+    - target: {fileID: 909959125131269463, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 909959125131269463, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TelaInicial
+      objectReference: {fileID: 0}
+    - target: {fileID: 909959125131269463, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ComportamentoGameUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 909959125131269463, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2041090279643200085, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4735965997726374137, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -776,7 +819,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4735965997726374141, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: MainCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 4735965998716631992, guid: 7984f7f168aa1f74687df1825747b17a, type: 3}
       propertyPath: m_AnchorMax.x

@@ -5,6 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class ComportamentoTelaInicial : MonoBehaviour
 {
+    public GameObject PainelTelaInicial;
+    public GameObject PainelComoJogar;
+
+    void Start()
+    {
+        Time.timeScale = 1;
+    }
+
     public void IniciarJogo()
     {
         SceneManager.LoadScene("Game");
@@ -13,5 +21,11 @@ public class ComportamentoTelaInicial : MonoBehaviour
     public void ExibirOpcoes()
     {
         Debug.Log("Devia mostrar as opções!");
+    }
+
+    public void AlternarComoJogar()
+    {
+        PainelTelaInicial.SetActive(!PainelTelaInicial.activeSelf);
+        PainelComoJogar.SetActive(!PainelComoJogar.activeSelf);
     }
 }

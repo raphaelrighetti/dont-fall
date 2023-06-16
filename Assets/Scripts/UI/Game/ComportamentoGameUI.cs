@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
-public class ComportamentoUI : MonoBehaviour
+public class ComportamentoGameUI : MonoBehaviour
 {
     public GameObject PainelGameOver;
     public GameObject PainelMenuPause;

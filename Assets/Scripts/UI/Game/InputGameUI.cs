@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ControlaUI : MonoBehaviour
+public class InputGameUI : MonoBehaviour
 {
-    private ComportamentoUI comportamentoUI;
+    private ComportamentoGameUI comportamentoUI;
 
     void Start()
     {
-        comportamentoUI = GetComponent<ComportamentoUI>();
+        comportamentoUI = GetComponent<ComportamentoGameUI>();
     }
 
     void Update()

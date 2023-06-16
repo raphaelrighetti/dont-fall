@@ -12,14 +12,14 @@ public class MovimentacaoJogador : MonoBehaviour
     private Rigidbody rb;
     private StatusJogador status;
     private InputMethod inputMethod;
-    private ComportamentoUI scriptComportamentoUI;
+    private ComportamentoGameUI scriptComportamentoUI;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         status = GetComponent<StatusJogador>();
         inputMethod = GetComponent<InputMethod>();
-        scriptComportamentoUI = UI.GetComponent<ComportamentoUI>();
+        scriptComportamentoUI = UI.GetComponent<ComportamentoGameUI>();
 
         contadorDash = DashCooldown;
     }

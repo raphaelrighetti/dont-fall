@@ -10,7 +10,7 @@ public class ComportamentoInimigo : MonoBehaviour, IMatavel
     private Rigidbody rb;
     private SphereCollider sphereCollider;
     private StatusInimigo status;
-    private ComportamentoUI scriptComportamentoUI;
+    private ComportamentoGameUI scriptComportamentoUI;
     private GameObject jogador;
 
     void Start()
@@ -23,7 +23,7 @@ public class ComportamentoInimigo : MonoBehaviour, IMatavel
 
         foreach (Canvas item in canvasList)
         {
-            ComportamentoUI script = item.GetComponent<ComportamentoUI>();
+            ComportamentoGameUI script = item.GetComponent<ComportamentoGameUI>();
 
             if (script != null)
             {
