@@ -6,5 +6,6 @@ public class StatusJogador : MonoBehaviour
 {
     public bool Vivo;
     public float Velocidade;
+    public float ForcaPulo;
     public float ForcaDash;
 }

@@ -7,9 +7,11 @@ public class MovimentacaoJogador : MonoBehaviour
     public float DashCooldown;
     public LayerMask EhParede;
     public Canvas UI;
+    private float distanciaChao;
     private float contadorDash;
     private Vector3 direcao;
     private Rigidbody rb;
+    private CapsuleCollider capsuleCollider;
     private StatusJogador status;
     private InputMethod inputMethod;
     private ComportamentoGameUI scriptComportamentoUI;
@@ -17,10 +19,12 @@ public class MovimentacaoJogador : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        capsuleCollider = GetComponent<CapsuleCollider>();
         status = GetComponent<StatusJogador>();
         inputMethod = GetComponent<InputMethod>();
         scriptComportamentoUI = UI.GetComponent<ComportamentoGameUI>();
 
+        distanciaChao = capsuleCollider.bounds.extents.y;
         contadorDash = DashCooldown;
     }
 
@@ -39,6 +43,11 @@ public class MovimentacaoJogador : MonoBehaviour
         {
             Dash();
         }
+
+        if (Input.GetButtonDown("Jump") && NoChao())
+        {
+            Pular();
+        }
     }
 
     void FixedUpdate()
@@ -49,10 +58,20 @@ public class MovimentacaoJogador : MonoBehaviour
         }
     }
 
+    private void Pular()
+    {
+        rb.AddForce(Vector3.up * status.ForcaPulo);
+    }
+
     private void Dash()
     {
         rb.AddForce(direcao * status.ForcaDash);
 
         contadorDash = 0;
+    }
+
+    private bool NoChao()
+    {
+        return Physics.Raycast(transform.position, Vector3.down, distanciaChao + 0.1F);
     }
 }

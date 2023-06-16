@@ -22,7 +22,7 @@ public class ComportamentoBala : MonoBehaviour
     {
         if (other.tag == "Inimigo")
         {
-            other.GetComponent<ComportamentoInimigo>().Empurrar(gameObject);
+            other.GetComponent<ComportamentoInimigoBola>().Empurrar(gameObject);
         }
 
         GameObject.Destroy(gameObject);

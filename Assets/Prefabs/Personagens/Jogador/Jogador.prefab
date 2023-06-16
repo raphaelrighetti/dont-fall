@@ -138,7 +138,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &4582410030918673600
 CapsuleCollider:
@@ -168,6 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Vivo: 1
   Velocidade: 10
+  ForcaPulo: 350
   ForcaDash: 750
 --- !u!114 &2711054487155922050
 MonoBehaviour:
@@ -181,6 +182,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 376831bfade99d74e9b78e3256eb7029, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HorizontalMovement: Horizontal
+  VerticalMovement: Vertical
+  Atirar: Fire1
+  TipoRotacao: 
 --- !u!114 &1221585740369066654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,6 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a81ddd87a8e18458f03167b2f89cd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CadenciaTiro: 0.1
   Bala: {fileID: 1108685977448837799, guid: e3169b6c017513e4ab1859fa61510e27, type: 3}
   SpawnBala: {fileID: 1609703106}
 --- !u!1001 &662372288470345580

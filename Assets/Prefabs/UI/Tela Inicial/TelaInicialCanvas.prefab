@@ -338,7 +338,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6899754322916961384}
         m_TargetAssemblyTypeName: ComportamentoTelaInicial, Assembly-CSharp
-        m_MethodName: ExibirOpcoes
+        m_MethodName: AlternarComoJogar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -742,7 +742,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6899754322916961384}
         m_TargetAssemblyTypeName: ComportamentoTelaInicial, Assembly-CSharp
-        m_MethodName: ExibirOpcoes
+        m_MethodName: AlternarComoJogar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -818,7 +818,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Shift: DASH\nWASD: Movimenta\xE7\xE3o\nMouse: Mira\nClique esquerdo: Atirar"
+  m_text: "Shift: DASH\nEspa\xE7o: Pular\nWASD: Movimenta\xE7\xE3o\nMouse: Mira\nClique
+    esquerdo: Atirar"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c69e648acb0bf084abdf32970b6a0a90, type: 2}
   m_sharedMaterial: {fileID: 4035257008032125366, guid: c69e648acb0bf084abdf32970b6a0a90, type: 2}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6072895713402125999}
   - component: {fileID: 6072895713402125998}
   m_Layer: 0
-  m_Name: SpawnInimigos
+  m_Name: SpawnInimigoBola
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -44,7 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c26bfca6e0f2a54b8d1a127c45bf5a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TempoSpawn: 1
-  TempoTrocaDificuldade: 10
-  ProbabilidadeSpawn: 25
   InimigoBola: {fileID: 2581273522173383210, guid: 1140fd9d20411174d9c3630edf376395, type: 3}

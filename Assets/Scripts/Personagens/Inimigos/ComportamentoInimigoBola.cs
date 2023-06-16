@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ComportamentoInimigo : MonoBehaviour, IMatavel
+public class ComportamentoInimigoBola : MonoBehaviour, IMatavel
 {
     private float distanciaJogador;
     private float distanciaChao;

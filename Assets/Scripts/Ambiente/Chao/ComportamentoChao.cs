@@ -6,6 +6,7 @@ using TMPro;
 public class ComportamentoChao : MonoBehaviour
 {
     public float ChanceCriacaoPlataforma;
+    public LayerMask EhChao;
     private float contadorCriacaoPlataforma;
     private float contadorCriacaoPlataformaMax;
     private float tempoAtivo;
@@ -84,7 +85,7 @@ public class ComportamentoChao : MonoBehaviour
                 break;
         }
 
-        if (Physics.OverlapBox(posicaoNovaPlataforma, boxCollider.bounds.extents / 2, transform.rotation).Length > 0)
+        if (Physics.OverlapBox(posicaoNovaPlataforma, boxCollider.bounds.extents / 2, transform.rotation, EhChao).Length > 0)
         {
             return;
         }
