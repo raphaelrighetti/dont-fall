@@ -18,6 +18,11 @@ public class ComportamentoTelaInicial : MonoBehaviour
         SceneManager.LoadScene("Game");
     }
 
+    public void SelecionarSkin()
+    {
+        SceneManager.LoadScene("SelecaoSkin");
+    }
+
     public void ExibirOpcoes()
     {
         Debug.Log("Devia mostrar as opções!");
